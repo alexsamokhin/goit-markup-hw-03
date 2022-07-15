@@ -4,6 +4,8 @@
   --accent-color: #2196f3;
   --white-color: #ffffff;
   --light-bg-color: #f5f4fa;
+  --items: 3;
+  --indent: 30px;
 }
 
 body {
@@ -255,7 +257,7 @@ img {
 .doing-list {
   display: flex;
   gap: 30px;
-  flex-basis: calc((100% - 30px * 2) / 3);
+  flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
 }
 
 /* Team */
@@ -266,7 +268,8 @@ img {
 .team-list {
   display: flex;
   gap: 30px;
-  flex-basis: calc((100% - 30px * 4) / 5);
+  --items: 4;
+  flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
 }
 
 .team-item {
@@ -381,7 +384,8 @@ img {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
-  flex-basis: calc((100% - 30px * 8) / 9);
+  --items: 9;
+  flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
 }
 
 .products-wrapper {
